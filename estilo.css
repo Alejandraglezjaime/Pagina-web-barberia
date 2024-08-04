@@ -1,0 +1,277 @@
+body{
+    font-family: "Truculenta", sans-serif;
+}
+
+/*STYLES DE CONTACTO Y PRODUCTOS*/
+
+header {
+    background-color: #BBBBBB;
+    padding: 0 0;
+}
+
+.caja{
+    width: 940px;
+    position: relative;
+    margin: 0 auto;
+}
+
+nav{
+    position: absolute;
+    top:110px;
+    right: 0;
+}
+
+nav li{
+    display: inline;
+    margin: 0 0 0 15px;
+}
+
+nav a{
+    text-transform: uppercase;
+    color: #000000;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+.productos{
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+
+.productos li{
+    display: inline-block;
+    text-align: center; 
+    width: 30%;
+    vertical-align: top;
+    margin: 0 1.5%; /*Margen de 0 en vertical y 1.5% entre los elementos, margin es espacio externo */
+    padding: 30px 20px; /*esparciamiento, 30 px vertical y 20px laterales. Le da como un espacio de la info dentro de cada lista*/
+    box-sizing: border-box;
+    /*Para ahorrarme las tres líneas de codigo siguientes: 
+        border-color: #000000; /*Color del borde que esta alrededor de cada elemento de la lista
+        border-width: 2px; /* Tamaño del borde de cada elemento de la lista
+        border-style: solid; /*El estilo de la línea es una línea solida
+    ocupamos la siguiente línea: */ 
+    border: 2px solid #000000;
+    border-radius: 10px 25px 40px 50px ; /* Configuro en una sola línea el tamaño de todos los bordes */
+
+}
+
+.productos li:hover{
+    border-color:blue; /*captura el movimmiento del mouse, si pasas el mouse encima*/
+}
+
+.productos li:active{
+    border-color:aqua; /*captura el click del mouse */
+    font-size: 33px;
+}
+
+.productos h2{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.productos li:hover h2{
+    font-size: 33px;
+}
+
+.producto-descripcion{
+    font-size: 18px;
+}
+
+.producto-precio{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top:10px;
+}
+
+footer{
+    text-align: center;
+    background: url(imagenes/bg.jpg); /*La imagen es cuadrada pero en el html se observa como si fuera rectandular, esto porque lo que hace 
+    el background es copiar n veces la imagen */
+    padding: 5px; /*esparciamiento de la imagen y copy con los bordes del pie de pagina*/
+}
+
+.copyright{
+    color:#FFFFFF;
+    font-size: 13px;
+    margin: 20px;
+}
+
+.contacto-datos {
+    width: 940px;
+    margin: 0 auto;
+}
+
+form {
+    margin: 40px 0;
+}
+
+form label, form legend{
+    display: block;
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+.input-padron{
+    display: block;
+    margin: 0 0 20px;
+    padding: 10px 25px;
+    /*define el ancho de los input que ocupen un 50% de los 90px establecidos arriba*/
+    width: 50%;
+}
+
+.checkbox{
+    margin: 30px 0;
+}
+
+.enviar{
+    width: 40%;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    background: gray;
+    border: none;
+    border-radius: 5px;
+    transition: 1s background;
+    cursor: pointer; /*Cambia el mouse a forma de manita cuando pones el mouse arriba del boton de aceptar*/
+}
+
+.enviar:hover{
+    background: darkgrey;
+    transform: scale(1.1); /*le digo aumentame al boton 1.2 (20%) cuando el mouse se posicione sobre el boton*/
+   /* transform: rotate(420deg); /*rota el boton*/
+} 
+
+table{
+    margin: 40px; /*margen externo de 40 px inferior y superior y 40px izquierno derecho*/
+
+}
+thead{
+    background: darkgrey;
+    color: azure;
+    font-weight: bold;
+
+}
+
+td, th{
+    padding: 8px 15px;
+}
+
+/*CSS PARA LA PAGINA INICIAL INDEX.HTML*/
+
+.banner{
+    width: 100%;
+}
+
+.principal{
+    padding: 3em 0;
+    background: #FFFFFF;
+    width: 940px;
+    margin: 0 auto;
+}
+
+.titulo-principal{
+    text-align: center;
+    font-size: 4em;
+    margin: 20px 0 1em;
+    clear: left;  
+    color: rgba(218,0,0, 0.3);
+}
+
+/*Primer letra pintada de nuestro titulo principal
+.titulo-principal::first-letter{
+    font-weight: bold;
+}
+/*Le pone un corchete adelante de cada titulo principal
+.titulo-principal:before{
+    content: "[";
+}*/
+
+.principal p{
+    margin: 0 0 1em;
+}
+
+.utensilios{ /*Imagen de los utensilios*/
+    width: 140px;
+    float: left;
+    margin: 0 20px 10px 0;
+}
+
+.mapa{
+    padding: 3em 0;
+    background: linear-gradient(#FEFEFE, #88888888);
+}
+.mapa p{
+    margin: 0 0 2em;
+    text-align: center;
+}
+
+.mapa-contenido{
+    width: 940px;
+    margin:0 auto ;
+}
+
+.diferenciales{
+    padding: 3em 0 ;
+    background: linear-gradient( #88888888,#000000c0);
+}
+
+.contenido-diferenciales{
+    width: 700px;
+    margin: 0 auto;
+}
+
+.lista-diferenciales{
+    width: 30%; 
+    display: inline-block; 
+    vertical-align: top;
+}
+
+.items{
+    line-height: 1.5 ;
+    display: block;
+}
+
+.items:before{
+    content: "⚝     ";
+}
+
+.items:nth-child(2n){ /*Va a pintar en negritas todos los items pares */
+    font-weight: bold;
+}
+
+.imagen-diferenciales{
+    width: 60%;
+    transition: 400ms;
+    box-shadow: 10px 10px 10px 5px #000000; /*ubicacion de la sombra horizontal, vertical y el color de la sombra, el cuarto parametro que podemos agregar es el degradado que seria el tercer parametro*/
+    /*ek cuarto parametro es la exparsion (donde queremos que llegue la sombra puedo incluso copiar esto varias veces y me hace varias sombras)*/
+}
+
+.imagen-diferenciales:hover{
+    opacity: 0.3;  /* opacity: 0.3; /*Hace que la imagen se vea tipo opaca, apenas se ve*/
+}
+
+
+.video{
+    width: 560px;
+    margin: 3em auto;
+}
+
+/*Configuro para que cuando lo vean desde un dispositivo movil se vea bien*/
+@media screen and (max-width:480px){
+    h1{
+        text-align: center;
+    }
+    nav{
+        position: static;
+    }
+    .caja, .principal, .mapa-contenido, .contenido-diferenciales, .video{
+        width: auto;
+    }
+    .lista-diferenciales, .imagen-diferenciales{
+        width: 100%;
+    }
+}
